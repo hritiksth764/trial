@@ -15,11 +15,24 @@ export default async (req, res) => {
 
     form.parse(req, async (err, fields, files) => {
       if (err) {
+        console.error("Error parsing form:", err);
         res.status(500).json({ error: "Failed to process form data" });
         return;
       }
 
       try {
+        console.log("Parsed fields:", fields);
+        console.log("Parsed files:", files);
+
+        // Check if files are correctly parsed
+        if (!files.signature || !files.signature.filepath) {
+          throw new Error("Signature file is missing or invalid");
+        }
+
+        if (!files.company_seal || !files.company_seal.filepath) {
+          throw new Error("Company seal file is missing or invalid");
+        }
+
         // Initialize Google Cloud Storage
         const storage = new Storage({
           credentials: JSON.parse(process.env.GOOGLE_CLOUD_STORAGE_CREDENTIALS),
