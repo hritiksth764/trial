@@ -1,0 +1,347 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("fonts/Avenir Next.ttc") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Agentur";
+  src: url("fonts/FontsFree-Net-Agentur-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Agentur Display";
+  src: url("fonts/FontsFree-Net-Agentur-Display.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("fonts/RobotoMono-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: white;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  position: relative;
+}
+
+.header .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.main-content {
+  padding: 20px;
+  padding-top: 0 !important;
+}
+
+.intro {
+  text-align: center;
+  /* margin-bottom: 20px; */
+}
+
+.intro h1 {
+  color: black;
+
+  font-family: Agentur;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 42px */
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  /* margin-top: 20px !important; */
+  margin-bottom: 0 !important;
+}
+
+.intro .p1 {
+  color: #baaf95;
+
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  margin: 0px !important;
+}
+
+.intro .p2 {
+  color: #baaf95;
+
+  text-align: center;
+  font-family: "Work Sans";
+  color: #0f0f0f;
+  text-align: center;
+  /* font-family: Baskerville; */
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+  margin-top: 54px !important;
+}
+
+.eoi-text {
+  color: #c14535;
+  font-family: "Avenir", sans-serif;
+  color: #8d6e56;
+  /* font-family: Baskerville; */
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 180%;
+  text-decoration-line: underline;
+}
+
+.scrollable-doc {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 10px;
+  height: 300px; /* Adjust height as needed */
+  overflow: auto;
+  margin-bottom: 0px !important;
+}
+
+.download-link p {
+  margin: 10px 0;
+  font-family: "Avenir", sans-serif;
+  color: #0f0f0f;
+
+  text-align: center;
+  font-family: Baskerville;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 180%; /* 18px */
+}
+
+p {
+  color: #747474;
+
+  text-align: center;
+  font-family: Baskerville;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 19.2px */
+}
+
+.scrollable-doc iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.form-section {
+  background-color: #fff;
+  /* padding: 20px; */
+  border-radius: 5px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+h2 {
+  color: #0f0f0f;
+
+  text-align: center;
+  font-family: Cochin;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-top: 74px;
+}
+
+.form-section {
+  padding: 0;
+  margin: 0;
+  background: #fffaf3;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 24px !important;
+}
+
+.form-section input {
+  color: var(--Black-60, rgba(17, 17, 19, 0.6));
+  font-family: "Avenir";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 16.8px */
+}
+
+.form-section .first {
+  margin-top: 30px;
+}
+.form-section .last {
+  margin-bottom: 20px;
+}
+
+.form-section input,
+.form-section button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.form-section input[type="date"] .form-section input[type="tel"],
+.form-section input[type="email"],
+.form-section input[type="text"],
+.form-section input[type="file"] {
+  width: auto;
+}
+
+label {
+  align-self: stretch;
+  color: #111;
+
+  font-family: "Avenir";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 22.4px */
+}
+
+radio-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #111;
+  font-family: "Avenir";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 19.2px */
+  opacity: 0.8;
+}
+
+.radio-group input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none"><circle cx="5" cy="5.14514" r="4.5" stroke="%23CFCFD0"/></svg>')
+    no-repeat center center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"]:checked {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none"><circle cx="5" cy="5.14514" r="4.5" stroke="%23000000" fill="%23000000"/></svg>')
+    no-repeat center center;
+  background-size: contain;
+}
+
+.form-section button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  color: #fff;
+
+  text-align: center;
+  font-family: "Avenir";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 22.4px */
+}
+
+.form-section button:hover {
+  background-color: #333;
+}
+
+.disclaimer {
+  margin-top: 20px;
+  align-self: stretch;
+  color: #414141;
+
+  text-align: center;
+  font-family: "Avenir";
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 140%; /* 14px */
+  opacity: 0.8;
+}
+
+#thank-you-message h3 {
+}
+.footer {
+  background-color: white;
+
+  text-align: left;
+  margin-top: 100px;
+}
+
+.line-separator {
+  width: 343px;
+  height: 1px;
+  background: #b2b7b6;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  /* Center the line separator and add vertical space */
+}
+.footer h1 {
+  padding-left: 20px;
+  color: #b8b8b8;
+
+  font-family: "Roboto Mono";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.4px;
+}
+
+.footer p {
+  text-align: left;
+  margin-left: 20px !important;
+
+  color: #b2b7b6;
+
+  font-family: "Avenir";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}

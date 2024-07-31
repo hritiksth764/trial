@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="form-section" id="formContainer">
+      <form id="eoi-form" enctype="multipart/form-data">
+        <input
+          class="first"
+          type="text"
+          id="brand-name"
+          name="brand_name"
+          placeholder="Brand Name"
+          required
+        />
+        <input
+          type="text"
+          id="legal-entity"
+          name="legal_entity"
+          placeholder="Legal Entity"
+          required
+        />
+        <input
+          type="text"
+          id="dob-display"
+          name="dob"
+          placeholder="Date of Birth (dd/mm/yyyy)"
+          required
+        />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone Number"
+          pattern="\+91[0-9]{10}"
+          title="Phone number must be in the format +91 98xxxxxxxx"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="text"
+          id="category"
+          name="category"
+          placeholder="Category of Retail"
+          required
+        />
+        <input
+          type="text"
+          id="area"
+          name="area"
+          placeholder="Approximate Carpet Area Requirement in Sq.Ft"
+          required
+        />
+        <input
+          type="text"
+          id="fit-out"
+          name="fit_out"
+          placeholder="Estimated Fit-Out Period Required"
+          required
+        />
+        <input
+          class="last"
+          type="text"
+          id="preferences"
+          name="preferences"
+          placeholder="Any Specific Requirements or Preferences?"
+        />
+        <label for="signature-upload"
+          >Upload Signature (jpg/jpeg/png/webp)</label
+        >
+        <input
+          type="file"
+          id="signature-upload"
+          name="signature"
+          accept=".jpg, .jpeg, .png, .webp"
+          required
+        />
+        <label for="seal-upload">Upload Company Seal (jpg/jpeg/png/webp)</label>
+        <input
+          type="file"
+          id="seal-upload"
+          name="company_seal"
+          accept=".jpg, .jpeg, .png, .webp"
+          required
+        />
+        <button type="submit">Submit</button>
+        <p class="disclaimer">
+          *Please note that this EOI is intended solely for planning purposes
+          and does not constitute a binding agreement. Upon receiving your EOI,
+          we will provide further details and engage in discussions to finalize
+          the terms and conditions of the lease agreement.
+        </p>
+      </form>
+      <div id="thank-you-message" style="display: none">
+        <h3>Thank you!</h3>
+        <p>Your form has been submitted successfully.</p>
+      </div>
+      <div id="error-message" style="display: none">
+        <h3>Submission Failed</h3>
+        <p>There was an error submitting your form. Please try again.</p>
+      </div>
+    </section>
+    <script>
+      const form = document.getElementById("eoi-form");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch("/api/submit-form", {
+            method: "POST",
+            body: formData,
+          });
+
+          if (response.ok) {
+            document.getElementById("thank-you-message").style.display =
+              "block";
+            form.style.display = "none";
+          } else {
+            document.getElementById("error-message").style.display = "block";
+          }
+        } catch (error) {
+          document.getElementById("error-message").style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>
