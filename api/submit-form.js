@@ -24,12 +24,16 @@ export default async (req, res) => {
         console.log("Parsed fields:", fields);
         console.log("Parsed files:", files);
 
+        // Access the first element of the array for each file
+        const signatureFile = files.signature ? files.signature[0] : null;
+        const sealFile = files.company_seal ? files.company_seal[0] : null;
+
         // Check if files are correctly parsed
-        if (!files.signature || !files.signature.filepath) {
+        if (!signatureFile || !signatureFile.filepath) {
           throw new Error("Signature file is missing or invalid");
         }
 
-        if (!files.company_seal || !files.company_seal.filepath) {
+        if (!sealFile || !sealFile.filepath) {
           throw new Error("Company seal file is missing or invalid");
         }
 
@@ -41,7 +45,6 @@ export default async (req, res) => {
         const bucket = storage.bucket(bucketName);
 
         // Upload Signature
-        const signatureFile = files.signature;
         const signatureFilename = `signatures/${Date.now()}-${
           signatureFile.originalFilename
         }`;
@@ -52,7 +55,6 @@ export default async (req, res) => {
         const signatureUrl = `https://storage.googleapis.com/${bucketName}/${signatureFilename}`;
 
         // Upload Company Seal
-        const sealFile = files.company_seal;
         const sealFilename = `seals/${Date.now()}-${sealFile.originalFilename}`;
         await bucket.upload(sealFile.filepath, {
           destination: sealFilename,
@@ -72,15 +74,15 @@ export default async (req, res) => {
 
         const values = [
           [
-            fields.brand_name,
-            fields.legal_entity,
-            fields.dob,
-            fields.phone,
-            fields.email,
-            fields.category,
-            fields.area,
-            fields.fit_out,
-            fields.preferences,
+            fields.brand_name[0],
+            fields.legal_entity[0],
+            fields.dob[0],
+            fields.phone[0],
+            fields.email[0],
+            fields.category[0],
+            fields.area[0],
+            fields.fit_out[0],
+            fields.preferences[0],
             signatureUrl,
             sealUrl,
           ],
