@@ -1,5 +1,5 @@
 import { google } from "googleapis";
-import formidable from "formidable";
+import { IncomingForm } from "formidable";
 import { Storage } from "@google-cloud/storage";
 import path from "path";
 
@@ -11,7 +11,7 @@ export const config = {
 
 export default async (req, res) => {
   if (req.method === "POST") {
-    const form = new formidable.IncomingForm();
+    const form = new IncomingForm();
 
     form.parse(req, async (err, fields, files) => {
       if (err) {
