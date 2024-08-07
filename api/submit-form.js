@@ -43,15 +43,14 @@ export default async (req, res) => {
 
         const values = [
           [
-            fields.brand_name[0],
-            fields.legal_entity[0],
-            fields.dob[0],
-            fields.phone[0],
-            fields.email[0],
-            fields.category[0],
-            fields.area[0],
-            fields.fit_out[0],
-            fields.preferences[0],
+            fields.name[0], // Updated field name
+            fields.phone_number[0], // Updated field name
+            fields.email[0], // Updated field name
+            fields.project_of_interest[0], // Updated field name
+            fields.enquiry_details[0], // Updated field name
+            fields.house_formats.join(", "), // Assuming multiple checkboxes
+            fields.location.join(", "), // Assuming multiple checkboxes
+            fields.expression_of_interest.join(", "), // Assuming multiple checkboxes
           ],
         ];
 

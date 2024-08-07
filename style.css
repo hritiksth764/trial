@@ -267,6 +267,45 @@ radio-group {
     no-repeat center center;
   background-size: contain;
 }
+/* Style the select dropdown */
+select#project-of-interest {
+  width: 100%; /* Make the dropdown take the full width */
+  padding: 10px; /* Add padding for a better look */
+  font-size: 12px; /* Adjust the font size */
+  color: var(--Black-60, rgba(17, 17, 19, 0.6));
+  /* background-color: #faf6ed; Set the background color */
+  border: 1px solid #d2bda0; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  appearance: none; /* Remove default arrow for custom styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer; /* Change cursor to pointer */
+  font-family: "Avenir";
+  margin: 5px 0; /* Use a clean font */
+  margin-bottom: 20px;
+}
+
+/* Custom arrow for the select dropdown */
+select#project-of-interest::after {
+  content: "▼"; /* Use an arrow character */
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent the arrow from blocking clicks */
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+/* Position the select dropdown relative to the container */
+select#project-of-interest {
+  position: relative;
+}
+
+/* Ensure the dropdown appears over other content */
+select#project-of-interest {
+  z-index: 1;
+}
 
 .form-section button {
   background-color: #000;

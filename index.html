@@ -45,29 +45,15 @@
         <input
           class="first"
           type="text"
-          id="brand-name"
-          name="brand_name"
-          placeholder="Brand Name"
-          required
-        />
-        <input
-          type="text"
-          id="legal-entity"
-          name="legal_entity"
-          placeholder="Legal Entity"
-          required
-        />
-        <input
-          type="text"
-          id="dob-display"
-          name="dob"
-          placeholder="Date of Birth (dd/mm/yyyy)"
+          id="name"
+          name="name"
+          placeholder="Name"
           required
         />
         <input
           type="tel"
-          id="phone"
-          name="phone"
+          id="phone-number"
+          name="phone_number"
           placeholder="Phone Number"
           pattern="\+91[0-9]{10}"
           title="Phone number must be in the format +91 98xxxxxxxx"
@@ -80,34 +66,86 @@
           placeholder="Email"
           required
         />
-        <input
-          type="text"
-          id="category"
-          name="category"
-          placeholder="Category of Retail"
+        <select id="project-of-interest" name="project_of_interest" required>
+          <option value="" disabled selected>Project of interest</option>
+          <option value="project1">Project 1</option>
+          <option value="project2">Project 2</option>
+          <!-- Add more options as needed -->
+        </select>
+        <textarea
+          id="enquiry-details"
+          name="enquiry_details"
+          placeholder="Tell us more about your enquiry"
           required
-        />
-        <input
-          type="text"
-          id="area"
-          name="area"
-          placeholder="Approximate Carpet Area Requirement in Sq.Ft"
-          required
-        />
-        <input
-          type="text"
-          id="fit-out"
-          name="fit_out"
-          placeholder="Estimated Fit-Out Period Required"
-          required
-        />
-        <input
-          class="last"
-          type="text"
-          id="preferences"
-          name="preferences"
-          placeholder="Any Specific Requirements or Preferences?"
-        />
+        ></textarea>
+
+        <label>Interested house formats</label>
+        <div>
+          <input
+            type="checkbox"
+            id="studio"
+            name="house_formats"
+            value="studio"
+          />
+          <label for="studio">Studio</label>
+
+          <input type="checkbox" id="1bhk" name="house_formats" value="1bhk" />
+          <label for="1bhk">1bhk</label>
+
+          <input type="checkbox" id="2bhk" name="house_formats" value="2bhk" />
+          <label for="2bhk">2bhk</label>
+
+          <input type="checkbox" id="3bhk" name="house_formats" value="3bhk" />
+          <label for="3bhk">3bhk</label>
+
+          <input
+            type="checkbox"
+            id="villa"
+            name="house_formats"
+            value="villa"
+          />
+          <label for="villa">Villa</label>
+        </div>
+
+        <label>Location</label>
+        <div>
+          <input
+            type="checkbox"
+            id="north-goa"
+            name="location"
+            value="north-goa"
+          />
+          <label for="north-goa">North Goa</label>
+
+          <input
+            type="checkbox"
+            id="south-goa"
+            name="location"
+            value="south-goa"
+          />
+          <label for="south-goa">South Goa</label>
+        </div>
+
+        <label>Expression of Interest for</label>
+        <div>
+          <input
+            type="checkbox"
+            id="leasing"
+            name="expression_of_interest"
+            value="leasing"
+          />
+          <label for="leasing">Leasing</label>
+
+          <input
+            type="checkbox"
+            id="purchase"
+            name="expression_of_interest"
+            value="purchase"
+          />
+          <label for="purchase">Purchase</label>
+        </div>
+
+        <!-- <button type="submit">Submit</button> -->
         <!-- <label for="signature-upload"
           >Upload Signature (jpg/jpeg/png/webp)</label
         >
