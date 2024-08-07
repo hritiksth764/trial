@@ -83,8 +83,6 @@ export default async (req, res) => {
             fields.area[0],
             fields.fit_out[0],
             fields.preferences[0],
-            signatureUrl,
-            sealUrl,
           ],
         ];
 
