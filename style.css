@@ -370,7 +370,7 @@ textarea#enquiry-details:focus {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 500px;
+  /* max-width: 500px; */
   margin: 0 auto;
   padding: 20px;
   border: 1px #d1dbd1;
@@ -404,6 +404,7 @@ textarea#enquiry-details:focus {
   color: #8d6e63;
   font-weight: bold;
 }
+
 .footer {
   margin-top: 40px;
   background-color: #f8f8f8; /* Background color */
