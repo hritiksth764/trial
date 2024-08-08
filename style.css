@@ -364,7 +364,44 @@ textarea#enquiry-details:focus {
   opacity: 0.8;
 }
 
+#thank-you-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px #d1dbd1;
+  border-radius: 4px;
+  text-align: center;
+  background: #fcfcfc;
+}
+
+#thank-you-message svg {
+  width: 17px;
+  height: 12.5px;
+  margin-bottom: 20px;
+}
+
 #thank-you-message h3 {
+  color: #4caf50;
+  font-weight: bold;
+  margin: 0;
+}
+
+#thank-you-message p {
+  margin: 10px 0;
+}
+
+#thank-you-message p:nth-child(3) {
+  color: #9e9e9e;
+}
+
+#thank-you-message p:nth-child(4) {
+  color: #8d6e63;
+  font-weight: bold;
 }
 .footer {
   margin-top: 40px;

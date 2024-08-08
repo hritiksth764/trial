@@ -18,11 +18,11 @@
       <h1>JOIN US AS SCAPE</h1>
       <p class="p1">A Realisation of Future</p>
       <br />
-      <p class="p2">
+      <!-- <p class="p2">
         Please go through the
         <a class="eoi-text">Expression of Interest</a>
         and fill out the below form.
-      </p>
+      </p> -->
       <!-- <div class="scrollable-doc">
           <iframe
             src="https://docs.google.com/document/d/1WYJCks_tH5G7jggRPZ-l0LAkEz9_hN2GQWvRVvIoHxc/preview"
@@ -68,8 +68,11 @@
         />
         <select id="project-of-interest" name="project_of_interest" required>
           <option value="" disabled selected>Project of interest</option>
-          <option value="project1">Project 1</option>
-          <option value="project2">Project 2</option>
+          <option value="project1">Project 1: Reis Magos</option>
+          <option value="project2">Project 2: Siolim Marna</option>
+          <option value="project2">Project 3: Siolim Sodium</option>
+          <option value="project2">Project 4: Pilerne</option>
+          <option value="project2">Project 5: Salvador</option>
           <!-- Add more options as needed -->
         </select>
         <textarea
@@ -81,16 +84,16 @@
 
         <label>Interested house formats</label>
         <div>
-          <input
+          <!-- <input
             type="checkbox"
             id="studio"
             name="house_formats"
             value="studio"
           />
-          <label for="studio">Studio</label>
+          <label for="studio">Studio</label> -->
 
-          <input type="checkbox" id="1bhk" name="house_formats" value="1bhk" />
-          <label for="1bhk">1bhk</label>
+          <!-- <input type="checkbox" id="1bhk" name="house_formats" value="1bhk" />
+          <label for="1bhk">1bhk</label> -->
 
           <input type="checkbox" id="2bhk" name="house_formats" value="2bhk" />
           <label for="2bhk">2bhk</label>
@@ -126,7 +129,7 @@
           <label for="south-goa">South Goa</label>
         </div>
 
-        <label>Expression of Interest for</label>
+        <!-- <label>Expression of Interest for</label>
         <div>
           <input
             type="checkbox"
@@ -143,7 +146,7 @@
             value="purchase"
           />
           <label for="purchase">Purchase</label>
-        </div>
+        </div> -->
 
         <!-- <button type="submit">Submit</button> -->
         <!-- <label for="signature-upload"
@@ -174,25 +177,60 @@
       </form>
       <footer class="footer">
         <div class="footer-content">
-          <a href="https://scapeliving.in" target="_blank" class="footer-link">
-            <img src="websiteImg.png" alt="Website" class="footer-icon" />
-            scapeliving.in
+          <a
+            href="https://www.scapeliving.in"
+            target="_blank"
+            class="footer-link"
+          >
+            <img src="image copy 3.png" alt="Website" class="footer-icon" />
+            www.scapeliving.in
           </a>
           <a
             href="https://www.instagram.com/scapeliving.in"
             target="_blank"
             class="footer-link"
           >
-            <span class="footer-icon">📷</span> @scapeliving.in
+            <img src="image copy 2.png" alt="Website" class="footer-icon" />
+            scapeliving.in
           </a>
           <a href="mailto:info@scapeliving.in" class="footer-link">
-            <span class="footer-icon">✉️</span> info@scapeliving.in
+            <img src="image copy 4.png" alt="Mail" class="footer-icon" />
+            info@scapeliving.in
           </a>
         </div>
       </footer>
-      <div id="thank-you-message" style="display: none">
-        <h3>Thank you!</h3>
-        <p>Your form has been submitted successfully.</p>
+      <div
+        id="thank-you-message"
+        style="
+          display: none;
+          text-align: center;
+          padding: 20px;
+          border: 1px solid #e8e8e8;
+          border-radius: 8px;
+        "
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="19"
+          height="15"
+          viewBox="0 0 19 15"
+          fill="none"
+          style="margin-bottom: 20px"
+        >
+          <path
+            d="M1 8.75L5.5 13.25L18 0.75"
+            stroke="#13AA10"
+            stroke-width="2"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <h3 style="color: #4caf50; font-weight: bold; margin: 0">Thank you!</h3>
+        <p style="color: #9e9e9e; margin: 10px 0">
+          Your response has been submitted
+        </p>
+        <p style="color: #8d6e63; margin: 10px 0; font-weight: bold">
+          Submit another response
+        </p>
       </div>
       <div id="error-message" style="display: none">
         <h3>Submission Failed</h3>
