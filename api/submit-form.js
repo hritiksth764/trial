@@ -50,7 +50,7 @@ export default async (req, res) => {
             fields.enquiry_details[0], // Updated field name
             fields.house_formats.join(", "), // Assuming multiple checkboxes
             fields.location.join(", "), // Assuming multiple checkboxes
-            fields.expression_of_interest.join(", "), // Assuming multiple checkboxes
+            // fields.expression_of_interest.join(", "), // Assuming multiple checkboxes
           ],
         ];
 
